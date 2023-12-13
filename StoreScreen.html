@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>Store system</title>
+    <meta charset="UTF-8">
+    <meta name="viweport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="storeStyle.css">
+
+</head>
+
+<body>
+    <div id="firstPage" class="crud">
+        <div class="head">
+            <h1>Crud Store</h1>
+            <p>PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+        <div class="input">
+            <input id="title" type="text" placeholder="title">
+            <div class="totalPrice">
+                <input onkeyup=" getTotal()" onclick="getTotal()" id="price" type="number" placeholder="price" min="0"
+                    required>
+                <input onkeyup=" getTotal()" onclick="getTotal()" id="taxes" type="number" placeholder="taxes" min="0"
+                    required>
+                <input onkeyup=" getTotal()" onclick="getTotal()" id="ads" type="number" placeholder="ads" min="0"
+                    required>
+                <input onkeyup=" getTotal()" onclick="getTotal()" id="discount" type="number" placeholder="discount"
+                    min="0" required>
+                <small id="total">0</small>
+            </div>
+            <input id="count" type="number" placeholder="count" maxlength="">
+            <input id="category" type="text" placeholder="category">
+            <select style="margin: 4px 0;" title="category" onclick="selectCategory()" id="categorySelect">
+                <option id="defult" disabled selected hidden>Category</option>
+                <option id="mobile">mobile</option>
+                <option id="Playstation">Playstation</option>
+                <option id="computer">computer</option>
+                <option id="electronic">electronic</option>
+                <option id="other">other...</option>
+            </select>
+            <button id="sumbit" type="submit">Create</button>
+        </div>
+        <div class="output">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" id="Search" type="text" placeholder="Search">
+                <div class="searchBtn">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle" type="submit">Search BY Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory" type="submit">Search BY Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>Price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tbody id="tbody">
+
+
+        </div>
+    </div>
+    </tbody>
+    </table>
+    </div>
+    </div>
+
+
+    <script src="storeScript.js"></script>
+</body>
+
+</html>
